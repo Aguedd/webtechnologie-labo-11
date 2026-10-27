@@ -19,7 +19,11 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
-  grid-template-areas: "header", "hero", "main", "footer";
+  grid-template-areas:
+    "header"
+    "hero"
+    "main"
+    "footer";
 
   background: var(--color-surface);
   color: var(--color-muted);
