@@ -250,3 +250,12 @@ main > section {
 .object-card figcaption p {
   margin: 0;
 }
+#programme {
+  caption-side: bottom;
+  #programme tbody tr:nth-child(odd) 
+  {
+    background: var(--surface);
+    :last-child
+
+  }
+}
