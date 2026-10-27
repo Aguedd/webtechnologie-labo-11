@@ -179,9 +179,9 @@ main {
 }
 
 main > section {
-  width: 100%;
-  max-width: 70rem;
   padding: 2.5rem 1rem;
+  max-width: 70rem;
+  width: 100%;
 }
 
 .discover,
@@ -252,10 +252,24 @@ main > section {
 }
 #programme {
   caption-side: bottom;
-  #programme tbody tr:nth-child(odd) 
-  {
-    background: var(--surface);
-    :last-child
+  tbody tr:nth-child(odd) {
+    background: #fff;
+  }
+  thead th {
+    background: #000;
+    color: #fff;
+  }
 
+  .table-scroll {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 34rem;
+    border-collapse: collapse;
+  }
+  td,
+  th {
+    padding: 1rem;
   }
 }
