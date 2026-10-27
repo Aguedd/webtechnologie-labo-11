@@ -14,21 +14,75 @@
   --font-body: "Helvetica Neue", Arial, sans-serif;
 }
 
-header {
-  /*¨*/
-}
-
-#hero {
-  /*¨*/
-}
-
 body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
+  grid-template-areas: "header", "hero", "main", "footer";
+
+  background: var(--color-surface);
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  line-height: 1.6;
 }
 
-main {
-  min-width: 0;
+h1,
+h2,
+h3,
+legend,
+thead,
+th {
+  font-family: var(--font-heading);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-ink);
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-accent-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: var(--color-ink);
+  color: var(--color-on-dark);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
 }

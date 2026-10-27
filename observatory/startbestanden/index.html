@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl-BE">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Observatory</title>
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header class="site-header">
@@ -13,7 +13,7 @@
         <img src="assets/logo.svg" alt="" />
         <span>Observatorium Zenit</span>
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Hoofdmenu">
         <ul>
           <li><a href="#discover">Ontdek</a></li>
           <li><a href="#objects">Objecten</a></li>
@@ -28,12 +28,13 @@
       <h1>Kijk mee naar de nachtelijke hemel</h1>
       <p>
         Elke donderdag- en vrijdagavond draait de koepel open boven het Zuid.
-        Eeen vrijwiller stelt de telescoop in, jij kijkt.
+        Een vrijwilliger stelt de telescoop in, jij kijkt.
       </p>
+      <a class="hero-link" href="#discover">Ontdek wat er te zien is</a>
     </section>
 
     <main>
-      <section class="discover">
+      <section id="discover" class="discover">
         <article>
           <h2>Een sterrenwacht midden in de stad</h2>
           <p>
@@ -43,15 +44,15 @@
             werd geplaatst, draait vandaag nog altijd mee met de hemel. Wat je
             door die lens ziet hangt af van het seizoen en van het weer, maar er
             is bijna altijd iets: <a href="#objects">de maan</a> met haar
-            kraters langs de shaduwlijn, <a href="#objects">Saturnus</a> met een
-            ring die scherper staat dan je op een foto zou verwachten, of de
+            kraters langs de schaduwlijn, <a href="#objects">Saturnus</a> met
+            een ring die scherper staat dan je op een foto zou verwachten, of
             <a href="#objects">de Orionnevel</a> als een vlek licht die pas vorm
-            krijgt wanneer je een paar minuten naar kijkt.
+            krijgt wanneer je er een paar minuten naar kijkt.
           </p>
           <p>
             Onze vrijwilligers zijn amateurastronomen. Ze leggen uit wat je
             ziet, waarom het er zo uitziet en waar je het zelf kan terugvinden
-            zonder telescoop. je hoeft niets te kennen om mee te komen kijken,
+            zonder telescoop. Je hoeft niets te kennen om mee te komen kijken,
             en je hoeft geen eigen materiaal mee te brengen.
           </p>
         </article>
@@ -59,10 +60,10 @@
         <aside aria-labelledby="hours-title">
           <h2 id="hours-title">Openingsuren</h2>
           <ul class="hours">
-            <li><span>Woensdag</span> <span>20.00 -- 23.00</span></li>
-            <li><span>Vrijdag</span> <span>20.00 -- 00.00</span></li>
-            <li><span>Zaterdag</span> <span>14.00 -- 00.00</span></li>
-            <li><span>Zondag</span> <span>14.00 -- 17.00</span></li>
+            <li><span>Woensdag</span> <span>20.00 &ndash; 23.00</span></li>
+            <li><span>Vrijdag</span> <span>20.00 &ndash; 00.00</span></li>
+            <li><span>Zaterdag</span> <span>14.00 &ndash; 00.00</span></li>
+            <li><span>Zondag</span> <span>14.00 &ndash; 17.00</span></li>
           </ul>
           <p>
             Bij bewolking blijven we dicht.
@@ -78,7 +79,7 @@
             <a href="#programme">
               <figure>
                 <img
-                  src="./assets/object-moon.svg"
+                  src="assets/object-moon.svg"
                   alt="De Maan met zichtbare kraters"
                   width="800"
                   height="600"
@@ -242,7 +243,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section id="contact" class="contact">
         <article>
           <h2>Reserveer je plaats</h2>
           <form action="#" method="post">
@@ -259,11 +260,11 @@
                 />
               </div>
               <div class="field">
-                <label for="email">Email</label>
+                <label for="email">E-mailadres</label>
                 <input
-                  type="text"
+                  type="email"
                   id="email"
-                  email="email"
+                  name="email"
                   autocomplete="email"
                   required
                 />
@@ -272,8 +273,8 @@
             <fieldset>
               <legend>Jouw bezoek</legend>
               <div class="field">
-                <label for="datetime">Datum</label>
-                <input type="datetime" id="datetime" name="datetime" required />
+                <label for="date">Datum</label>
+                <input type="date" id="date" name="date" required />
               </div>
               <div class="field">
                 <label for="guests">Aantal personen</label>
