@@ -165,7 +165,6 @@ ul {
 }
 
 .hero-link::after {
-  content: "\2193";
   display: block;
   font-size: 1.5rem;
 }
@@ -272,4 +271,167 @@ main > section {
   th {
     padding: 1rem;
   }
+}
+
+.object-card figcaption h3 {
+  color: var(--color-on-dark);
+  margin-bottom: 0.25rem;
+}
+ 
+.object-card figcaption p {
+  margin: 0;
+}
+ 
+.table-scroll {
+  overflow-x: auto;
+}
+ 
+table {
+  width: 100%;
+  min-width: 34rem;
+  border-collapse: collapse;
+}
+ 
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-line);
+}
+ 
+thead th {
+  background: var(--color-ink);
+  color: var(--color-on-dark);
+}
+ 
+tbody th {
+  color: var(--color-ink);
+}
+ 
+tbody tr:nth-child(odd) {
+  background: var(--color-card);
+}
+ 
+th:last-child,
+td:last-child {
+  text-align: right;
+}
+ 
+caption {
+  caption-side: bottom;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+ 
+form {
+  display: grid;
+  gap: 1.5rem;
+}
+ 
+fieldset {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: 0.5rem;
+}
+ 
+legend {
+  padding: 0 0.5rem;
+  color: var(--color-ink);
+  font-weight: 700;
+}
+ 
+.field {
+  display: grid;
+  gap: 0.25rem;
+}
+ 
+.field label {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+ 
+.field:has(:required) label::after {
+  content: " *";
+}
+ 
+input,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  color: var(--color-ink);
+  background: var(--color-card);
+  border: 2px solid var(--color-line);
+  border-radius: 0.5rem;
+}
+ 
+input:focus,
+textarea:focus {
+  outline: 3px solid var(--color-accent);
+}
+ 
+input:user-valid,
+textarea:user-valid {
+  border-color: var(--color-valid);
+}
+ 
+input:user-invalid,
+textarea:user-invalid {
+  border-color: var(--color-invalid);
+}
+ 
+form .button {
+  justify-self: start;
+}
+ 
+address {
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+ 
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+ 
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--color-ink);
+  border-radius: 50%;
+}
+ 
+.social img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+ 
+.site-footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  background: var(--color-ink);
+  color: var(--color-on-dark);
+  text-align: center;
+}
+ 
+.site-footer p {
+  margin: 0;
+}
+ 
+.site-footer ul {
+  display: flex;
+  gap: 1.5rem;
+}
+ 
+.site-footer a {
+  color: var(--color-accent);
 }
